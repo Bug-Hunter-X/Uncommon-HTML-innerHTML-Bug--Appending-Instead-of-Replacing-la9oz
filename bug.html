@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is initially visible.
+  </div>
+
+  <script>
+    //Incorrect usage of innerHTML which causes an unexpected behaviour 
+    document.getElementById("myDiv").innerHTML = "<p>This text replaces the div content, but...</p>" + document.getElementById("myDiv").innerHTML; // This appends instead of replacing
+  </script>
+</body>
+</html>
